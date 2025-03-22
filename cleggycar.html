@@ -2,4 +2,56 @@
 <!-- For the regularly updating doc go to https://docs.google.com/document/d/1_FmH3BlSBQI7FGgAQL59-ZPe8eCxs35wel6JUyVaG8Q/ -->
 
 
-<html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1"> <title>Elastic Face</title> <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bobydob/godotpack@5f7e18f39f847f9824f3126e3fa095273c24f653/side/eman/face.css" type="text/css"></head> <body> <script type="text/template" id="loading-template"><div id="loading-bar" class="loading-bar-visible"> <div id="loading-fill"></div> </div> </script> <script type="text/template" id="no-support-template"><div id="error">Your browser does not support the required features. Try another browser and/or device!</div></script> <script type="text/template" id="main-template"><div id="quality-container"> <div id="quality-label">Quality</div> <div class="quality" id="quality-medium">Medium</div> <div class="quality" id="quality-high">High</div> </div> <div id="credits"> <div>Created by <a href="http://david.li" target="_blank">David Li</a></div> <div>Audio by <a href="http://dolphinclub.website/audio" target="_blank">Dolphin Club Audio</a></div> </div></script> <div id="placeholder"></div> <script src="https://cdn.jsdelivr.net/gh/bobydob/godotpack@bd60a8e8be799b9efc700a4ec8352857bfe9a011/side/eman/face.js"></script> </body> </html>
+</style></head><body dir="ltr"><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/UnityProgress.js"></script><script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.js"></script><script type="text/javascript">
+      var gameInstance;
+
+      window.onload = function () {
+        gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/n-101-1/1@main/2.7.json", {
+          onProgress: UnityProgress,
+          Module: {
+            onRuntimeInitialized: function () {
+              UnityProgress(gameInstance, "complete");
+            },
+          },
+        });
+      };
+    </script>
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 100%; height: 100%; margin: 0px; padding: 0px; border: 0px; position: relative; background: rgb(0, 0, 0);"><canvas id="#canvas" style="width: 100%; height: 100%; cursor: default;" width="1018" height="926"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-auth.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase-firestore.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1login.js?v=2"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n-101-1/1@main/1firestore.js"></script>
+
+    <script>
+      initializeFireBase();
+
+      function showAds() {
+        console.log("show ads");
+      }
+      function requestNewAd() {
+        // Show video ad
+        unityAdFinishedCallback();
+      }
+      function unityAdFinishedCallback() {
+        try {
+          if (gameInstance) gameInstance.SendMessage("AdsManager", "OnWebCallback");
+        } catch (error) {
+          console.log(error);
+        }
+      }
+    </script>
+  
+
+
+
+
+
+
+</script><script src="blob:https://gotlgsogl-opensocial.googleusercontent.com/43fddd1c-53cc-4d6d-88c5-93762d972e03" id="a96bf7f9ec45ce9224c9b5b9b42b17b2"></script></body></html>
